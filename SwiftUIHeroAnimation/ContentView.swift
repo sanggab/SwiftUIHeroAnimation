@@ -7,15 +7,73 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+public class AnimationID {
+    static let imageID = "image"
+}
+
+public struct ContentView: View {
+    private var imageString: String = "https://photo.honeymatchs.com/dev_photo/profile/YUhxRHBZR0NkNHRVYkdaalozMS9lSUdEZXBCWGJtVmdwN2Ux?s=b"
+    @State private var isShowingDetail: Bool = false
+    @State private var isAppeared = false
+    @State private var isAnimating = false
+    @Namespace var animation
+    
+    public var body: some View {
+        ZStack {
+            VStack {
+
+                Rectangle()
+                    .fill(.pink)
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+
+                if isShowingDetail {
+//                    HeroCardView(isShowingDetail: $isShowingDetail,
+//                                 isAppeard: $isAppeared,
+//                                 imageString: imageString,
+//                                 animation: animation)
+//                    .transition(.scale(scale: 1))
+//                    .disabled(isAnimating)
+                    TestHeroCardView(isShowingDetail: $isShowingDetail,
+                                 isAppeard: $isAppeared,
+                                 imageString: imageString,
+                                 animation: animation)
+                    .transition(.scale(scale: 1))
+                    .disabled(isAnimating)
+                } else {
+                    CardView(isShowingDetail: $isShowingDetail,
+                             isAppeard: $isAppeared,
+                             imageString: imageString,
+                             animation: animation)
+                    .transition(.scale(scale: 1))
+                    .disabled(isAnimating)
+                }
+            }
+            .ignoresSafeArea(.keyboard, edges: .all)
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .onChange(of: isShowingDetail) { newValue in
+            checkAnimation(newValue: newValue)
+        }
+        .background(.green)
+    }
+    
+    private func checkAnimation(newValue: Bool) {
+        print("newValue -> \(newValue)")
+        
+        if newValue {
+                   // Disable user interaction while animation
+                   isAnimating = true
+                   DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                       isAnimating = false
+                   }
+               } else {
+                   // Disable user interaction while animation
+                   isAnimating = true
+                   DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                       isAnimating = false
+                   }
+               }
     }
 }
 

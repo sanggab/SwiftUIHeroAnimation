@@ -14,6 +14,9 @@
 		EFCC2D582B511A4C0047B7C6 /* SwiftUIHeroAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D572B511A4C0047B7C6 /* SwiftUIHeroAnimationTests.swift */; };
 		EFCC2D622B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D612B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift */; };
 		EFCC2D642B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D632B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift */; };
+		EFED23D42B54AFC1006EFAAA /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */; };
+		EFF820992B5607FF00C0EAA3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF820982B5607FF00C0EAA3 /* CardView.swift */; };
+		EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		EFCC2D5D2B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIHeroAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC2D612B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHeroAnimationUITests.swift; sourceTree = "<group>"; };
 		EFCC2D632B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHeroAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
+		EFF820982B5607FF00C0EAA3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeroCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		EFCC2D452B511A4B0047B7C6 /* SwiftUIHeroAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EFED23D22B54AFB6006EFAAA /* HeroCardView */,
 				EFCC2D462B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift */,
 				EFCC2D482B511A4B0047B7C6 /* ContentView.swift */,
 				EFCC2D4A2B511A4C0047B7C6 /* Assets.xcassets */,
@@ -125,6 +132,16 @@
 				EFCC2D632B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIHeroAnimationUITests;
+			sourceTree = "<group>";
+		};
+		EFED23D22B54AFB6006EFAAA /* HeroCardView */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */,
+				EFF820982B5607FF00C0EAA3 /* CardView.swift */,
+				EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */,
+			);
+			path = HeroCardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */,
 				EFCC2D492B511A4B0047B7C6 /* ContentView.swift in Sources */,
 				EFCC2D472B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift in Sources */,
+				EFF820992B5607FF00C0EAA3 /* CardView.swift in Sources */,
+				EFED23D42B54AFC1006EFAAA /* HeroCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
