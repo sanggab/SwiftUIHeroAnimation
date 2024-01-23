@@ -12,7 +12,7 @@ public class AnimationID {
 }
 
 public struct ContentView: View {
-    private var imageString: String = "https://photo.honeymatchs.com/dev_photo/profile/YUhxRHBZR0NkNHRVYkdaalozMS9lSUdEZXBCWGJtVmdwN2Ux?s=b"
+    private var imageString: String = "https://upload3.inven.co.kr/upload/2023/06/23/bbs/i16526700580.jpg"
     @State private var isShowingDetail: Bool = false
     @State private var isAppeared = false
     @State private var isAnimating = false

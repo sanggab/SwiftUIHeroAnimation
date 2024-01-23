@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 public struct TestHeroCardView: View {
     @Binding public var isShowingDetail: Bool
@@ -19,7 +20,6 @@ public struct TestHeroCardView: View {
     @State private var keyboardState: Bool = false
     @State private var keyboardHeight: CGFloat = 0
     @State private var buttonPoint: CGPoint = .init(x: 80, y: -80)
-//    @State private var focusState: Bool = false
     @FocusState private var focusState: Bool
     @State private var testOffsetY: CGFloat = 0
     
@@ -28,18 +28,19 @@ public struct TestHeroCardView: View {
             let _ = print("proxy size -> \(proxy.size)")
             
             if keyboardState {
-                Color.blue
+                Color.gray
                     .zIndex(3)
                     .onTapGesture {
                         focusState = false
                     }
+                    .opacity(0.5)
             }
             
-            Rectangle()
-                .fill(.pink)
+            KFImage(URL(string: imageString))
+                .resizable()
                 .matchedGeometryEffect(id: AnimationID.imageID, in: animation, anchor: .top)
-                .frame(maxWidth: .infinity, alignment: .center)
                 .frame(height: 300, alignment: .top)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .zIndex(2)
                 .padding(.horizontal, 10)
                 .padding(.top, 150)
@@ -58,9 +59,6 @@ public struct TestHeroCardView: View {
                         .onChange(of: text) { newValue in
                             print("text newvalue -> \(newValue)")
                         }
-                        .onChange(of: focusState) { newValue in
-                            print("focusState- > \(focusState)")
-                        }
                     
                     if keyboardState {
                         Rectangle()
@@ -68,7 +66,6 @@ public struct TestHeroCardView: View {
                             .frame(width: 40, height: 40)
                             .transition(AnyTransition.opacity.animation(.easeInOut))
                             .matchedGeometryEffect(id: "Button", in: animation)
-//                            .offset(x: buttonPoint.x, y: buttonPoint.y)
                             .padding(.top, 10)
                             .padding(.trailing, 10)
                             .opacity(keyboardState ? 1.0 : 0.0)

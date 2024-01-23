@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 public struct CardView: View {
     @Binding public var isShowingDetail: Bool
@@ -25,13 +26,15 @@ public struct CardView: View {
 //
 //            }
 //            .frame(width: 300, height: 300)
-            Rectangle()
-                .fill(.pink)
+            
+            
+            KFImage(URL(string: imageString))
+                .resizable()
                 .matchedGeometryEffect(id: AnimationID.imageID, in: animation, anchor: .top)
                 .frame(width: 50, height: 50)
                 .padding(.leading, 10)
                 .onTapGesture {
-                    withAnimation {
+                    withAnimation(.linear) {
                         isShowingDetail = true
                     }
                 }

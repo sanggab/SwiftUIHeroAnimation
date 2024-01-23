@@ -40,7 +40,7 @@ public struct HeroCardView: View {
                 .zIndex(2)
 //                .offset(y: -30)
                 .onTapGesture {
-                    withAnimation(.linear) {
+                    withAnimation(.hero) {
                         isShowingDetail = false
                     }
                 }

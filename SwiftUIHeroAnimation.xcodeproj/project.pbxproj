@@ -17,6 +17,8 @@
 		EFED23D42B54AFC1006EFAAA /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */; };
 		EFF820992B5607FF00C0EAA3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF820982B5607FF00C0EAA3 /* CardView.swift */; };
 		EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */; };
+		EFF820A02B59FB8D00C0EAA3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */; };
+		EFF820A32B5A3DFB00C0EAA3 /* LikeSendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF820A22B5A3DFB00C0EAA3 /* LikeSendView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		EFF820982B5607FF00C0EAA3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeroCardView.swift; sourceTree = "<group>"; };
+		EFF820A22B5A3DFB00C0EAA3 /* LikeSendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeSendView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF820A02B59FB8D00C0EAA3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 		EFCC2D452B511A4B0047B7C6 /* SwiftUIHeroAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EFF820A12B5A3DF300C0EAA3 /* LikeSendView */,
 				EFED23D22B54AFB6006EFAAA /* HeroCardView */,
 				EFCC2D462B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift */,
 				EFCC2D482B511A4B0047B7C6 /* ContentView.swift */,
@@ -144,6 +149,14 @@
 			path = HeroCardView;
 			sourceTree = "<group>";
 		};
+		EFF820A12B5A3DF300C0EAA3 /* LikeSendView */ = {
+			isa = PBXGroup;
+			children = (
+				EFF820A22B5A3DFB00C0EAA3 /* LikeSendView.swift */,
+			);
+			path = LikeSendView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +173,9 @@
 			dependencies = (
 			);
 			name = SwiftUIHeroAnimation;
+			packageProductDependencies = (
+				EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */,
+			);
 			productName = SwiftUIHeroAnimation;
 			productReference = EFCC2D432B511A4B0047B7C6 /* SwiftUIHeroAnimation.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +248,9 @@
 				Base,
 			);
 			mainGroup = EFCC2D3A2B511A4B0047B7C6;
+			packageReferences = (
+				EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EFCC2D442B511A4B0047B7C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +296,7 @@
 				EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */,
 				EFCC2D492B511A4B0047B7C6 /* ContentView.swift in Sources */,
 				EFCC2D472B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift in Sources */,
+				EFF820A32B5A3DFB00C0EAA3 /* LikeSendView.swift in Sources */,
 				EFF820992B5607FF00C0EAA3 /* CardView.swift in Sources */,
 				EFED23D42B54AFC1006EFAAA /* HeroCardView.swift in Sources */,
 			);
@@ -603,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFCC2D3B2B511A4B0047B7C6 /* Project object */;
 }
