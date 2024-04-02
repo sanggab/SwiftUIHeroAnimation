@@ -8,19 +8,32 @@
 import SwiftUI
 import Kingfisher
 
-public struct LikeSendView: View {
+public struct LikeSendView<ContentView: View>: View {
     
+    @Binding var isShowing: Bool
+    public var content: () -> ContentView
     
-    
-    
+    public init(isShowing: Binding<Bool>,
+                @ViewBuilder content: @escaping () -> ContentView) {
+        self._isShowing = isShowing
+        self.content = content
+    }
     
     public var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack(spacing: 0) {
+                
+                
+                
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
     }
 }
 
-struct LikeSendView_Previews: PreviewProvider {
-    static var previews: some View {
-        LikeSendView()
-    }
-}
+//struct LikeSendView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LikeSendView()
+//    }
+//}

@@ -33,11 +33,12 @@ public struct TestHeroCardView: View {
                     .onTapGesture {
                         focusState = false
                     }
-                    .opacity(0.5)
+                    .opacity(0.7)
             }
             
             KFImage(URL(string: imageString))
                 .resizable()
+//                .id(AnimationID.imageID)
                 .matchedGeometryEffect(id: AnimationID.imageID, in: animation, anchor: .top)
                 .frame(height: 300, alignment: .top)
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -56,6 +57,7 @@ public struct TestHeroCardView: View {
                         .padding(.all, 10)
                         .foregroundColor(.gray)
                         .focused($focusState)
+                        .matchedGeometryEffect(id: "TextEditor", in: animation)
                         .onChange(of: text) { newValue in
                             print("text newvalue -> \(newValue)")
                         }

@@ -14,7 +14,9 @@
 		EFCC2D582B511A4C0047B7C6 /* SwiftUIHeroAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D572B511A4C0047B7C6 /* SwiftUIHeroAnimationTests.swift */; };
 		EFCC2D622B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D612B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift */; };
 		EFCC2D642B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC2D632B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift */; };
+		EFD52F0A2B84871300899AEA /* ToolTipBox in Frameworks */ = {isa = PBXBuildFile; productRef = EFD52F092B84871300899AEA /* ToolTipBox */; };
 		EFED23D42B54AFC1006EFAAA /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */; };
+		EFF1893A2B5F7A87008C196A /* LikeHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF189392B5F7A87008C196A /* LikeHistoryView.swift */; };
 		EFF820992B5607FF00C0EAA3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF820982B5607FF00C0EAA3 /* CardView.swift */; };
 		EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */; };
 		EFF820A02B59FB8D00C0EAA3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */; };
@@ -50,6 +52,7 @@
 		EFCC2D612B511A4C0047B7C6 /* SwiftUIHeroAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHeroAnimationUITests.swift; sourceTree = "<group>"; };
 		EFCC2D632B511A4C0047B7C6 /* SwiftUIHeroAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHeroAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EFED23D32B54AFC1006EFAAA /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
+		EFF189392B5F7A87008C196A /* LikeHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeHistoryView.swift; sourceTree = "<group>"; };
 		EFF820982B5607FF00C0EAA3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EFF8209A2B58AAB200C0EAA3 /* TestHeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHeroCardView.swift; sourceTree = "<group>"; };
 		EFF820A22B5A3DFB00C0EAA3 /* LikeSendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeSendView.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD52F0A2B84871300899AEA /* ToolTipBox in Frameworks */,
 				EFF820A02B59FB8D00C0EAA3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +108,7 @@
 		EFCC2D452B511A4B0047B7C6 /* SwiftUIHeroAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EFF189382B5F7A81008C196A /* LikeHistoryView */,
 				EFF820A12B5A3DF300C0EAA3 /* LikeSendView */,
 				EFED23D22B54AFB6006EFAAA /* HeroCardView */,
 				EFCC2D462B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift */,
@@ -149,6 +154,14 @@
 			path = HeroCardView;
 			sourceTree = "<group>";
 		};
+		EFF189382B5F7A81008C196A /* LikeHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				EFF189392B5F7A87008C196A /* LikeHistoryView.swift */,
+			);
+			path = LikeHistoryView;
+			sourceTree = "<group>";
+		};
 		EFF820A12B5A3DF300C0EAA3 /* LikeSendView */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +188,7 @@
 			name = SwiftUIHeroAnimation;
 			packageProductDependencies = (
 				EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */,
+				EFD52F092B84871300899AEA /* ToolTipBox */,
 			);
 			productName = SwiftUIHeroAnimation;
 			productReference = EFCC2D432B511A4B0047B7C6 /* SwiftUIHeroAnimation.app */;
@@ -250,6 +264,7 @@
 			mainGroup = EFCC2D3A2B511A4B0047B7C6;
 			packageReferences = (
 				EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EFD52F082B84871300899AEA /* XCRemoteSwiftPackageReference "SwiftUIToolTipBox" */,
 			);
 			productRefGroup = EFCC2D442B511A4B0047B7C6 /* Products */;
 			projectDirPath = "";
@@ -294,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFF8209B2B58AAB200C0EAA3 /* TestHeroCardView.swift in Sources */,
+				EFF1893A2B5F7A87008C196A /* LikeHistoryView.swift in Sources */,
 				EFCC2D492B511A4B0047B7C6 /* ContentView.swift in Sources */,
 				EFCC2D472B511A4B0047B7C6 /* SwiftUIHeroAnimationApp.swift in Sources */,
 				EFF820A32B5A3DFB00C0EAA3 /* LikeSendView.swift in Sources */,
@@ -625,6 +641,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EFD52F082B84871300899AEA /* XCRemoteSwiftPackageReference "SwiftUIToolTipBox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanggab/SwiftUIToolTipBox.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -636,6 +660,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EFD52F092B84871300899AEA /* ToolTipBox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFD52F082B84871300899AEA /* XCRemoteSwiftPackageReference "SwiftUIToolTipBox" */;
+			productName = ToolTipBox;
+		};
 		EFF8209F2B59FB8D00C0EAA3 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EFF8209E2B59FB8D00C0EAA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;

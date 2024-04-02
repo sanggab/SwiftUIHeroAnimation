@@ -30,6 +30,7 @@ public struct CardView: View {
             
             KFImage(URL(string: imageString))
                 .resizable()
+//                .id(AnimationID.imageID)
                 .matchedGeometryEffect(id: AnimationID.imageID, in: animation, anchor: .top)
                 .frame(width: 50, height: 50)
                 .padding(.leading, 10)

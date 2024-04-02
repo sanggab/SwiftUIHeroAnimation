@@ -38,14 +38,14 @@ public struct ContentView: View {
                                  isAppeard: $isAppeared,
                                  imageString: imageString,
                                  animation: animation)
-                    .transition(.scale(scale: 1))
+//                    .transition(.scale(scale: 1))
                     .disabled(isAnimating)
                 } else {
                     CardView(isShowingDetail: $isShowingDetail,
                              isAppeard: $isAppeared,
                              imageString: imageString,
                              animation: animation)
-                    .transition(.scale(scale: 1))
+//                    .transition(.scale(scale: 1))
                     .disabled(isAnimating)
                 }
             }
